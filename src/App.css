@@ -1,38 +1,120 @@
-.App {
+*{
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body{
+  background-color: #ffffff;
+  color: #000;
+}
+
+main{
+  padding-top: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1{
   text-align: center;
+  color: #000000;
+  margin: 0;
+  font-size: 4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form{
+  margin-top:20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input{
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: transparent;
+  color: #1f1e1e;
+  border: 2px solid #000000;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input[type="datetime-local"]{
+  color:#292929;
+}
+
+form div.basic{
+  display:flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.button-wrapper {
+  text-align: center; /* Centers the button horizontally within the wrapper */
+  width: 100%; /* Ensures the wrapper takes full width to center the button properly */
+}
+
+.button-wrapper button {
+  width: 50%; /* Sets the button width to 50% */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bolder; /* Makes the font bold */
+  display: inline-block; /* Ensures the button aligns properly within the wrapper */
+}
+
+
+div.transactions{
+  margin-top:10px;
+}
+
+/*div.transaction {
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 10px 30px; 
+  margin: 20px 0; /
+  border: 1px solid #f3efef;
+  border-radius: 10px;
+}*/
+
+div.transaction:first-child {
+  border-top: 0;
+}
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #000000;
 }
 
-.App-link {
-  color: #61dafb;
+
+div.transaction div.name{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.transaction div.description{
+  font-size: .9rem;
+  color:#302f2f;
 }
+
+div.right{
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+div.price.gre{
+  color: rgb(2, 117, 2);
+}
+
+div.price.red{
+  color: #c11;
+}
+
+div.transaction div.datetime{
+  font-size: .9rem;
+  color: #0e0e0e;
+}
+
