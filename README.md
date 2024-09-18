@@ -9,8 +9,6 @@ A simple web app for tracking your expenses and managing your budget in real-tim
 - **Real-Time Balance Update**: See your total balance automatically update with each transaction.
 - **Cross-Platform**: Can be accessed via any web browser.
 
-## Demo
-
 
 ## Tech Stack
 
