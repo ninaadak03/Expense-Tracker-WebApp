@@ -11,6 +11,10 @@ app.get('/api/test', (_req,res) => {
     res.json('test ok2');
 });
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the MERN Backend!');
+});
+
 app.post('/api/transaction', async (req,res) => {
     await mongoose.connect(process.env.MONGO_URL);
     const {name,description,datetime,price} = req.body;
