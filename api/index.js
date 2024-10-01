@@ -25,6 +25,7 @@ app.get('/api/transactions', async (req,res) => {
     res.json(transactions);
 })
 
-app.listen(4040);
-
-//password for mongodb user money - ninaadsmoney
+const PORT = process.env.PORT || 4040;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
