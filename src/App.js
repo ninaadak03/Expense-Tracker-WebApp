@@ -12,14 +12,14 @@ function App() {
   }, []);
 
   async function getTransactions() {
-    const url = process.env.REACT_APP_API_URL+'/transactions';
+    const url = process.env.REACT_APP_API_URL+'/api/transactions';
     const response = await fetch(url);
     return await response.json();
   }
   
   function addNewTransaction(ev) {
     ev.preventDefault();
-    const url = process.env.REACT_APP_API_URL+'/transaction';
+    const url = process.env.REACT_APP_API_URL+'/api/transaction';
     const price = name.split(' ')[0];
     fetch(url, {
       method:'POST',
